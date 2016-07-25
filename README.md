@@ -1,3 +1,3 @@
 # DatePickerPreference
 
-Custom DatePickerPreference for android
+Custom DatePickerPreference for android by extending DialogPreference
