@@ -1,0 +1,51 @@
+apply plugin: 'com.android.library'
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'datepickerpreference'
+
+    publishedGroupId = 'com.arp.datepickerpreference'
+    libraryName = 'DatePickerPreference'
+    artifact = 'datepickerpreference'
+
+    libraryDescription = 'Custom DatePickerPreference for Android'
+
+    siteUrl = 'https://github.com/aswinrpillai/DatePickerPreference'
+    gitUrl = 'https://github.com/aswinrpillai/DatePickerPreference.git'
+
+    libraryVersion = '0.9.1'
+
+    developerId = 'aswinrpillai'
+    developerName = 'Aswin R Pillai'
+    developerEmail = 'aswinrpillai1994@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.1"
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:24.1.1'
+}
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
